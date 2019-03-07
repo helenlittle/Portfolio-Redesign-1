@@ -13,6 +13,7 @@
 .container-flex {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .container-flex-column {
@@ -22,7 +23,6 @@
 
 body{
   background-color: #FFFFFC;
-  background-color: var(--blue-color);
   width: 100vw;
   height: 100%;
   margin: 0px;
@@ -32,11 +32,12 @@ body{
 
 #navigation {
   width: 100%;
-  height: 80px;
+  height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   background-color: rgb(255, 255, 252, 0.8);
+  border-bottom: 5px solid #F43552;
 }
 
 #navigation a{
@@ -168,12 +169,234 @@ body{
 }
 
 /* Main body with project cards */
+.project-card {
+  width: 25%;
+  height: 500px;
+}
+
+.project-animation {
+  width: 100%;
+  /*background-color: gray;*/
+  height: 400px;
+}
+
+.project-title {
+  margin-bottom: 0px;
+}
+
+.project-description {
+  margin: 0px;
+}
+
+
+/* Syringe Animation */
+#container-syringe {
+  align-items: center;
+  justify-content: flex-end;  
+}
+
+.syringe {
+  background-color: black;
+}
+
+#syringe-box-1 {
+  width: 25px;
+  height: 5px;
+}
+
+#syringe-box-2 {
+  width: 12px;
+  height: 20px;
+  transition: all 1s ease;
+}
+
+#syringe-box-3 {
+  width: 25px;
+  height: 20px;
+}
+
+#syringe-box-4 {
+  width: 40px;
+  height: 5px;
+}
+
+#syringe-box-5 {
+  width: 20px;
+  height: 200px;
+}
+
+#syringe-box-6 {
+  width: 15px;
+  height: 15px;
+}
+
+#syringe-box-7 {
+  width: 10px;
+  height: 15px;
+}
+
+#syringe-box-8 {
+  width: 3px;
+  height: 25px;
+}
+
+#container-syringe:hover #syringe-box-2{
+  transition: all 1s ease;
+  height: 50px;
+}
+
+/* Zip-line animation*/
+.container-zipline {
+  width: 80%;
+  height: 40%;
+  background-color: gray;
+  position: relative;
+  margin: auto;
+}
+
+.zipline-part {
+  background-color: black;
+  position: absolute;
+}
+
+.post {
+  display: absolute;
+}
+
+#post-1 {
+  height: 50px;
+  width: 20px;
+  bottom: 0px;
+}
+
+#post-2 {
+  height: 80px;
+  width: 20px;
+  bottom: 0px;
+  left: 200px;
+}
+
+.pulley {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+#pulley-1 {
+  bottom: 60px;
+}
+
+#pulley-2 {
+  bottom: 90px;
+  left: 200px;
+}
+
+.pulley-spoke {
+  position: absolute;
+  width: 2px;
+  height: 12px;
+  top: 2px;
+  left: 9px;
+  margin: 2px auto;
+  background-color: white;
+  transition: all 1s ease;
+}
+
+#spoke-2 {
+  transform: rotate(90deg);
+}
+
+#spoke-4 {
+  transform: rotate(90deg);
+}
+
+.line {
+  width: 200px;
+  height: 2px;
+  transform: rotate(-8.5deg);
+}
+
+#line-1 {
+  left: 12px;
+  bottom: 75px;
+}
+
+#line-2 {
+  left: 12px;
+  bottom: 93px;
+}
+
+#container-bucket {
+  position: absolute;
+  bottom: 70px;
+  left: 70px;
+  transition: all 1s ease-in-out;
+}
+
+#line-3 {
+  width: 2px;
+  height: 20px;
+}
+
+#bucket {
+  height: 0px;
+  width: 20px;
+  border-top: 25px solid black;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  position: absolute;
+  top: 20px;
+  left: -15px;
+}
+
+.pulley-post {
+  width: 5px;
+  height: 15px;
+}
+
+#line-4 {
+  bottom: 50px;
+  left: 7.5px;
+}
+
+#line-5 {
+  bottom: 80px;
+  left: 207.5px;
+}
+
+.container-zipline:hover #container-bucket{
+  transition: all 1s ease-in-out;
+  bottom: 80px;
+  left: 130px;
+}
+
+.container-zipline:hover #spoke-1 {
+  transition: all 1s ease-in-out;
+  transform: rotate(-180deg);
+}
+
+.container-zipline:hover #spoke-2 {
+  transition: all 1s ease-in-out;
+  transform: rotate(-90deg);
+}
+
+.container-zipline:hover #spoke-3 {
+  transition: all 1s ease-in-out;
+  transform: rotate(-180deg);
+}
+
+.container-zipline:hover #spoke-4 {
+  transition: all 1s ease-in-out;
+  transform: rotate(-90deg);
+}
+
 
 /*footer*/
 footer {
   display: flex;
   flex-wrap: wrap;
   color: var(--gray-color);
+  background-color: var(--blue-color);
 }
 
 footer h4{
@@ -215,6 +438,10 @@ footer li:hover {
     height: 4px;
   }
   
+  .project-card {
+    width: 50%;
+  }
+  
   footer ul{
     width: 100%;
   }
@@ -238,6 +465,10 @@ footer li:hover {
   
   .tabName {
     font-size: 11pt;
+  }
+  
+  .project-card {
+    width: 100%;
   }
   
   footer ul{
