@@ -172,11 +172,13 @@ body{
 .project-card {
   width: 25%;
   height: 500px;
-  /*background: radial-gradient(circle, transparent 20%, black), hotpink; */
-  background: rgb(0,0,0);
-  background: linear-gradient(0deg, rgba(0,0,0,0.7) 10%, rgba(0,0,0,0.1) 50%);
+  background: linear-gradient(0deg, rgba(0,0,0,0.7) 10%, rgba(0,0,0,0.1) 30%);
   justify-content: flex-end;
   color: white;
+}
+
+.project-card:hover {
+  background: linear-gradient(0deg, rgba(0,0,0,0.7) 10%, rgba(0,0,0,0) 30%);
 }
 
 #syringe-card {
@@ -204,11 +206,12 @@ body{
 }
 
 .project-title {
-  margin: 0px 10px 10px 10px;
+  margin: 0px 20px 10px 20px;
 }
 
 .project-description {
-  margin: 0px 10px 30px 10px;
+  margin: 0px 20px 30px 20px;
+  font-size: 11pt;
 }
 
 
@@ -261,6 +264,10 @@ footer li:hover {
   
   .project-card {
     width: 50%;
+  }
+  
+  .project-description {
+    display: none;
   }
   
   footer ul{
